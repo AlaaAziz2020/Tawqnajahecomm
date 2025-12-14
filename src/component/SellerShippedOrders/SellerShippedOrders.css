@@ -1,230 +1,189 @@
-/* ===========================
-   shippeded Orders Page Style
-   =========================== */
+/* ===============================
+   Orders Page — RTL with Vertical Tabs (FIXED)
+   =============================== */
 
-.shipped-container {
+/* ---------- Base ---------- */
+.orders-page {
   direction: rtl;
-  margin-bottom: 12%;
-      margin-top: 12%; 
+  min-height: calc(100vh - 200px);
+  padding-bottom: 80px;
+  box-sizing: border-box;
 }
 
-.shippeded-wrapper {
-    display: flex;
-    margin-top: 17% !important;
-    direction: rtl;
-    margin-bottom: 8%;
+.orders-page .container {
+  padding-top: 18px;
+  padding-inline: 20px;
+  box-sizing: border-box;
 }
 
-/* اليمين */
-.shippedorders-tabsnew {
-  width: 250px;
+/* ---------- Layout ---------- */
+.orders-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* ---------- Tabs Column ---------- */
+.tabs-column {
+  width: 220px;
+  flex: 0 0 220px;
+}
+
+.tabs-vertical {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
-/* الشمال (الكروت) */
-.shippedorders-list {
+.tab {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: #fff;
+  color: #1D3A77;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  text-decoration: none;
+}
+
+.tab.active {
+  background: #1D3A77;
+  color: #fff;
+}
+
+/* ---------- Content ---------- */
+.orders-content {
   flex: 1;
-      margin-right: 4%;
 }
 
-.card{
-border-bottom: 1px solid #000;
-    border-radius: 0;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
+/* ===============================
+   ORDER ROW (GRID — السعر في النص)
+   =============================== */
+.order-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* ID | PRICE | INFO */
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #e5e7eb;
 }
-.shipped-heading{
-    font-size: 20px;
+
+/* Order ID */
+.order-id2 {
+  background: #ff5a00;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  justify-self: start;
 }
-.shipped-text{
-    font-size: 20px;
+
+/* ===== PRICE (CENTER — الحل النهائي) ===== */
+.order-price {
+  justify-self: center;
+  text-align: center;
+  color: #E55F1A;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;              /* ❗ مهم */
+}
+
+/* Order Info */
+.order-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-self: end;
+}
+
+.order-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.order-info p {
     font-weight: 400;
-    color: #9E9E9E;
-}
-.shipped-price{
-    font-size: 18px;
-    color:#F38B1B;
-    font-weight: bold;
-}
-.badge{
-    background-color: #1D3A77;
-    font-size: 18px;
-    font-weight: 400;
-}
-/* كل كارت طلب */
-/* .order-cardshippeded {
-  border-radius: 12px !important;
-  background: #fff !important;
-  border: 1px solid #eeeeee !important;
-  transition: 0.3s ease-in-out;
-  padding: 20px !important;
+    margin: 4px 0 0;
+    font-size: 17px;
+    color: #9e9e9e;
 }
 
-.order-cardshippeded:hover {
-  transform: scale(1.01);
-} */
-
-/* الصورة */
-.order-img {
-  width: 80px;
-  height: 80px;
+.order-info img {
+  width: 55px;
+  height: 55px;
   border-radius: 8px;
   object-fit: cover;
 }
-
-/* اسم المنتج */
-.product-title {
-  font-size: 20px;
-  margin: 0;
-  font-weight: 700;
-}
-
-/* الوصف */
-.product-desc {
-  margin: 0;
-  font-size: 14px;
-  color: #777;
-}
-
-/* السعر */
-.price {
-  color: #ff8c00;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* رقم الطلب */
-.order-id {
-  background: #123a8a !important;
-  padding: 8px 14px !important;
-  font-size: 16px;
-  border-radius: 8px !important;
-  height: fit-content;
-}
-
-
-/* ================================
-   SHIPPED ORDERS RESPONSIVE (match confirmed)
-================================ */
-
-/* التابلت وما دون - 992px */
-@media (max-width: 992px) {
-
-  .shippeded-wrapper {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 8% !important;
-    margin-bottom: 5%;
+    .complstatus-tab {
+        width: 36%;
+        padding: 14px;
+        font-size: 16px;
+        position: absolute;
+        left: 0%;
+        top: 1%;
+    }
+/* ---------- Tablet ---------- */
+@media (max-width: 1023px) {
+  .tabs-column {
+    width: 180px;
+    flex: 0 0 180px;
   }
 
-  /* التبويبات */
-  .shippedorders-tabsnew {
-   width: 100% !important;
+  .tab {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .orders-layout {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tabs-column {
+    width: 100%;
+  }
+
+  .tabs-vertical {
     flex-direction: row;
     overflow-x: auto;
     gap: 10px;
-    margin-bottom: 15px;
   }
 
-  .shippedorders-tabsnew .tab {
-    flex: 1 0 auto;
-    font-size: 18px;
-    padding: 12px;
+  .tab {
+    white-space: nowrap;
+    width: auto;
   }
 
-  /* قائمة الكروت */
-  .shippedorders-list {
-    width: 100%;
-    margin-right: 0;
+  .order-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
   }
 
-  /* الكارت */
-  .card {
-    padding: 15px !important;
+  .order-id,
+  .order-price,
+  .order-info {
+    justify-self: center;
   }
 
-  .order-img {
-    width: 60px;
-    height: 60px;
+  .order-info {
+    justify-content: center;
   }
-
-  .shipped-heading {
-    font-size: 18px;
+  .order-content .image-side .text-side{
+    padding-top: 10%;
   }
-
-  .shipped-text {
-    font-size: 16px;
-  }
-
-  .shipped-price {
-    font-size: 16px;
-  }
-
-  .badge {
-    font-size: 16px;
-  }
-
-  .product-title {
-    font-size: 18px;
-  }
-
-  .product-desc {
-    font-size: 12px;
-  }
-
-  .price {
-    font-size: 18px;
-  }
-
-  .order-id {
-    font-size: 14px;
-    padding: 6px 10px !important;
-  }
-}
-
-/* الموبايل - 576px */
-@media (max-width: 576px) {
-
-  .shippedorders-tabsnew {
-    flex-direction: column;
-  }
-
-  .card {
-    padding: 10px !important;
-  }
-
-  .order-img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .product-title {
-    font-size: 16px;
-  }
-
-  .product-desc {
-    font-size: 11px;
-  }
-
-  .shipped-heading {
-    font-size: 16px;
-  }
-
-  .shipped-text,
-  .shipped-price,
-  .badge {
-    font-size: 14px;
-  }
-
-  .price {
-    font-size: 16px;
-  }
-
-  .order-id {
-    font-size: 12px;
-    padding: 5px 8px !important;
+  .complstatus-tab{
+        width: 36%;
+        padding: 14px;
+        font-size: 16px;
+        position: absolute;
+        left: 0%;
+        top: 1%;
+    
   }
 }

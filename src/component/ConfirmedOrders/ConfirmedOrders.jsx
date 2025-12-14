@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../ConfirmedOrders/ConfirmedOrders.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import wintershirt from "../../assets/winter-shirt.jpg";
-
+import wintershirt from "../../assets/winter-shirt.jpg";useState
 export default function ConfirmedOrders() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,7 +18,7 @@ export default function ConfirmedOrders() {
   ];
 
   return (
-    <div className="orders-page mt-2 mb-5">
+    <div className="orders-page mt-2 mb-5 mobileorders">
       <div className="container">
         <div className="row">
 

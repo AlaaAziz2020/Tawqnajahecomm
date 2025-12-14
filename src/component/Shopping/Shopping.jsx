@@ -10,6 +10,7 @@ import carticon from "../../assets/carticon.png";
 
 export default function Shopping() {
   const [price, setPrice] = useState(10);
+  const [showFilters, setShowFilters] = useState(false);
 
   const products = [
     {
@@ -50,7 +51,8 @@ export default function Shopping() {
         <div className="row">
 
           {/* ===== SIDEBAR ===== */}
-          <div className="col-md-3 filter-column pt-5">
+          <div className={`col-md-3 filter-column pt-5 ${showFilters ? 'show' : ''}`}>
+          
             <div className="box">
 
               <h3 className="sidebar-title ">اختيار التصنيف</h3>
@@ -153,6 +155,9 @@ export default function Shopping() {
 
           {/* ===== PRODUCTS ===== */}
           <div className="col-md-9 shopping-left pt-5">
+            {/* <button className="filter-toggle-btn" onClick={() => setShowFilters(!showFilters)}>
+              {showFilters ? 'إخفاء الفلاتر' : 'عرض الفلاتر'}
+            </button> */}
             <h1 className="breadcrumb-title">التسوق</h1>
             <p className="results">النتيجة 1 - 12 من 214526</p>
 

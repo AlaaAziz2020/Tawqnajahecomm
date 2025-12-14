@@ -1,14 +1,15 @@
-import React from 'react'
-import SellerRelatedProducts from '../SellerRelatedProducts/SellerRelatedProducts'
+import React from "react";
+import SellerRelatedProducts from "../SellerRelatedProducts/SellerRelatedProducts";
+import "./SellerMyStore.css";
+
 export default function SellerMyStore() {
   return (
-    <div>
-        <div className=' mystorepage'>
-            <div className='container '>
-         <SellerRelatedProducts/>
-
-            </div>
+    <>
+      <div className="mystorepage ">
+        <div className="container">
+           {/* <SellerRelatedProducts />  */}
         </div>
-    </div>
-  )
+      </div>
+    </>
+  );
 }

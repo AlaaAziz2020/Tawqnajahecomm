@@ -46,6 +46,20 @@ background: #fff;
     position: relative;
     height: 20vh;
 }
+.canceledstatus-tab{
+  background-color: #DD0C0C;
+      width: 36%;
+      
+        padding: 14px;
+        font-size: 16px;
+        position: absolute;
+        left: 0%;
+        top: 1%;
+            border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: center;
+    
+}
 .order-content {
 display: flex;
     justify-content: space-between;

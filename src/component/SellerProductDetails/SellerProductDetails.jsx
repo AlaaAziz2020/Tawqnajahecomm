@@ -82,13 +82,13 @@ export default function SellerProductDetails() {
   };
 
   return (
-    <div className="product-page  container ">
+    <div className="product-page  container">
 
-      <h1 className="product-heading">
+      <h1 className="product-heading ">
         تفاصيل المنتج / <span className="comm">ذات صلة</span>
       </h1>
 
-      <div className="product-wrapper md:col-md-6 col-12">
+      <div className="product-wrapper md:col-md-6 col-12  ">
 
         <div className="product-image-boxdetails">
           <img

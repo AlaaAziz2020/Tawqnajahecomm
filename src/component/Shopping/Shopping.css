@@ -233,6 +233,7 @@ font-weight: bold;
 .shopping-cards{
   border:1px solid #E9E9E9
 }
+
 /* ===================== MOBILE & TABLET FIX ===================== */
 @media (max-width: 768px) {
 
@@ -250,6 +251,24 @@ font-weight: bold;
     border-left: none;
     margin-bottom: 25px;
     padding: 15px;
+    display: none; /* Hide by default on mobile */
+  }
+
+  .filter-column.show {
+    display: block; /* Show when toggle is clicked */
+  }
+
+  /* Toggle button */
+  .filter-toggle-btn {
+    display: block;
+    background: #1D3A77;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
   }
 
   /* ✅ نشيل الخط العمودي في الموبايل */

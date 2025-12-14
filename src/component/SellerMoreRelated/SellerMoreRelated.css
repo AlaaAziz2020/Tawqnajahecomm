@@ -1,8 +1,8 @@
-.morerelated{
-    margin-top: 12%;
+.morerelated .related-section{
+    margin-top: 9%;
 }
 @media (max-width: 768px) {
-    .morerelated{
-    margin-top: 100%;
+    .morerelated .related-section{
+    margin-top: 8%;
 }
 }

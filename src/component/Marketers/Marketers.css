@@ -1,61 +1,124 @@
+/* MARKETERS — cleaned & responsive */
 .marketers-page {
   background: #f5f5f7;
   direction: rtl;
-  margin-top: 10%;
+  /* responsive top offset (min 40px, scales with viewport, max 120px) */
+  padding-top: clamp(40px, 6vw, 120px);
+  padding-bottom: 40px;
 }
 
+/* card */
 .marketers-card {
   background: #fff;
   border-radius: 16px;
   padding: 30px;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
+/* titles & text */
 .marketers-title {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 .marketers-desc {
-    color: #534b4b;
-    font-size: 15px;
-    font-weight: bold;
+  color: #534b4b;
+  font-size: 15px;
+  font-weight: bold;
 }
 .marketsection-title {
   margin-top: 25px;
   font-weight: bold;
   color: #1d3a77;
 }
-
 .terms-list {
-    padding-right: 20px;
-    font-size: 17px;
-    color: #444;
+  padding-right: 20px;
+  font-size: 17px;
+  color: #444;
 }
-
 .confirm-box {
   margin-top: 15px;
   font-size: 14px;
 }
-
 .marketersave-btn {
   background: #1d3a77;
   border: none;
   padding: 10px 30px;
   border-radius: 10px;
+  color: #fff;
 }
-
 input.form-control {
   border-radius: 12px;
   height: 50px;
   background: #f9f9f9;
+  box-sizing: border-box;
 }
 
-/* ✅ Responsive */
+/* ===========================
+   MOBILE: up to 768px
+   =========================== */
 @media (max-width: 768px) {
-  .marketers-card {
-    margin-top: 14%;
+  .marketers-page {
+    /* padding-top: 56px;  */
+    /* padding-bottom: 28px; */
+            margin-top: 123px;
+
   }
-  
+
+  .marketers-card {
+    margin: 16px;
+    padding: 18px;
+  }
+
+  .marketers-desc {
+    font-size: 14px;
+  }
+
+  .marketsection-title { font-size: 18px; margin-top: 18px; }
+
+  .terms-list { font-size: 15px; padding-right: 12px; }
+
+  input.form-control { height: 44px; }
+  .marketersave-btn { padding: 10px 20px; }
+}
+
+/* ===========================
+   TABLET: 769px — 1023px
+   =========================== */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .marketers-page {
+    padding-top: 72px;
+    padding-bottom: 40px;
+  }
+
+  .marketers-card {
+    max-width: 900px;
+    padding: 24px;
+    margin: 12px auto;
+  }
+
+  .marketers-desc { font-size: 15px; }
+  .terms-list { font-size: 16px; padding-right: 16px; }
+  input.form-control { height: 48px; }
+}
+
+/* ===========================
+   DESKTOP: 1024px and up
+   =========================== */
+@media (min-width: 1024px) {
+  .marketers-page {
+    /* padding-top: clamp(56px, 5vw, 120px);
+    padding-bottom: 48px; */
+            margin-top: 143px;
+
+  }
+
+  .marketers-card {
+    padding: 30px;
+    margin-top: 0;
+  }
+
+  .marketers-desc { font-size: 15px; }
+  .terms-list { font-size: 17px; }
 }

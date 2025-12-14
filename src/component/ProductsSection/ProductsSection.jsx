@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./ProductsSection.css";
+import "../ProductsSection/ProductsSection.css"; // make sure this file contains the responsive CSS
 
 // الملابس
 import item1 from "../../assets/wool.jpg";
@@ -45,7 +45,6 @@ import market4 from "../../assets/market4.jpg";
 
 import star from "../../assets/Star 3.png";
 import carticon from "../../assets/whitecarts.png";
-
 
 const sections = [
   {
@@ -123,31 +122,27 @@ export default function ProductsSection() {
   const navigate = useNavigate();
 
   return (
-    <div className="products-wrapper container">
+    <div className="products-wrapper ">
+      <div className="container ">
+        {sections.map((sec, index) => (
+          <section key={index} className="mt-5">
+            {/* عنوان القسم */}
+            <div className="customer-products-header ">
+              <h2 className="customer-products-title mt-5">{sec.title}</h2>
+              {/* <span className="customer-view-more">رؤية المزيد</span> */}
+            </div>
 
-      {sections.map((sec, index) => (
-        <div key={index} className="mt-2">
-
-          {/* عنوان القسم */}
-          <div className="customer-products-header">
-            <h2 className="customer-products-title">{sec.title}</h2>
-            <span className="customer-view-more">رؤية المزيد</span>
-          </div>
-
-          {/* الكروت Bootstrap Responsive */}
-          <div className="row g-4 ">
-            {sec.products.map((p) => (
-              <div
-                key={p.id}
-                className="col-12 col-sm-6 col-md-4 col-lg-3"
-              >
-                <ProductCard p={p} navigate={navigate} />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-
+            {/* الكروت Bootstrap Responsive: change to col-md-3 for 4 columns at md and up */}
+            <div className="row g-4">
+              {sec.products.map((p) => (
+                <div key={p.id} className="col-12 col-sm-6 col-md-3">
+                  <ProductCard p={p} navigate={navigate} />
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
     </div>
   );
 }
@@ -161,39 +156,47 @@ function ProductCard({ p, navigate }) {
     <Link
       to="/productssection"
       state={{ product: p }}
-      className="customer-product-card d-block"
+      className="customer-product-card d-block h-100 d-flex flex-column mt-5"
       style={{ textDecoration: "none", color: "inherit" }}
     >
       <div className="customer-discount">{p.discount}%</div>
 
       <img src={p.img} className="customer-product-img" alt={p.name} />
 
-      <i className="fa fa-heart heart-icon position-absolute" />
+      <button className="customer-heart" aria-label="wishlist">
+        <i className="fa fa-heart heart-icon" />
+      </button>
 
-      <div className="d-flex justify-content-between px-3 mt-2">
-        <h3 className="customer-product-name">{p.name}</h3>
-        <div className="customer-rate">
-          <img src={star} alt="" /> {p.rate}
+      {/* card body grows to push button to bottom */}
+      <div className="customer-card-body px-3 mt-2">
+        <div className="d-flex justify-content-between align-items-start">
+          <h3 className="customer-product-name">{p.name}</h3>
+          <div className="customer-rate">
+            <img src={star} alt="rate" style={{ width: 16, marginInlineStart: 6 }} /> {p.rate}
+          </div>
+        </div>
+
+        <p className="customer-desc">{p.desc}</p>
+
+        <div className="customer-price">
+          <span className="new">{p.price} ر.س</span>
+          <span className="old">{p.oldPrice} ر.س</span>
         </div>
       </div>
 
-      <p className="customer-desc px-3">{p.desc}</p>
-
-      <div className="customer-price px-3">
-        <span className="new">{p.price} ر.س</span>
-        <span className="old">{p.oldPrice} ر.س</span>
+      <div className="customer-card-actions px-3 pb-3">
+        <button
+          className="customer-add-btn"
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            navigate("/paymentpage");
+          }}
+        >
+          <span className="carts">إضافة للعربة</span>
+          <img src={carticon} alt="cart" />
+        </button>
       </div>
-
-      <button
-        className="customer-add-btn"
-        onClick={(e) => {
-          e.preventDefault();
-          navigate("/paymentpage");
-        }}
-      >
-        <span className="carts">إضافة للعربة</span>
-        <img src={carticon} alt="cart" />
-      </button>
     </Link>
   );
 }
