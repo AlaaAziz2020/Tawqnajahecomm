@@ -128,7 +128,7 @@ import SellersDetails from './component/SellersDetails/SellersDetails';
 import AllOffers from './component/AllOffers/AllOffers';
 import AllProductsByCategory from './component/AllProductsByCategory/AllProductsByCategory';
 import Privacy from './component/Privacy/Privacy';
-
+import ScrollTop from './component/ScrollTop/ScrollTop'
 
 const router = createBrowserRouter([
   {
@@ -213,7 +213,8 @@ const router = createBrowserRouter([
 {path:"offerstawqnajah",element:<Offerstawqnajah/>},
 {path:"successpartners",element:<SuccessPartners/>},
 {path:'sellers',element:<Sellers/>},
-{path:'product/:id',element:<SellersDetails/>},
+{ path:'sellersdetails/:id', element:<SellersDetails/> },
+{path:'scrolltop',element:<ScrollTop/>},
 {path:'alloffers',element:<AllOffers/>},
 {path:'/products/:category',element:<AllProductsByCategory/>},
 {path:'privacy',element:<Privacy/>}

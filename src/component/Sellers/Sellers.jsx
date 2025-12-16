@@ -49,7 +49,7 @@ export default function Sellers() {
           <div
             key={seller.id}
             className="seller-card"
-            onClick={() => navigate(`/sellers/${seller.id}`)}
+            onClick={() => navigate(`/sellersdetails/${seller.id}`)}
           >
             <img src={seller.img} alt={seller.name} />
             <h4>{seller.name}</h4>
