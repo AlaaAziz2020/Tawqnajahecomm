@@ -88,6 +88,13 @@
   cursor: pointer;
   margin-top: 12px;
 }
+.section-block {
+  max-width: 1200px;
+  margin: 80px auto;   /* 👈 المسافة الموحدة */
+  padding: 0 16px;
+  box-sizing: border-box;
+  direction: rtl;
+}
 
 /* ===== Responsive rules ===== */
 

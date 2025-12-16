@@ -32,27 +32,33 @@ export default function SellerShippedOrders() {
         {/* ====== الجزء اليمين (التابات) ====== */}
         <div className="col-lg-3  d-lg-block ">
           <div className="orders-right-tabs">
+            
+           <button
+                className={`cright-tab cright-btn ${
+                  location.pathname === "/seller/sellerconfirmedorders" ? "active" : ""
+                }`}
+                onClick={() => navigate("/seller/sellerconfirmedorders")}
+              >
+                الطلبات الحالية
+              </button>
 
-            <button
-              className={`cright-tab cright-btn shipped-btn ${location.pathname === "/confirmedorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellerconfirmedorders")}
-            >
-              الطلبات الحالية
-            </button>
+              <button
+                className={`cright-tab cright-btn2 ${
+                  location.pathname === "/seller/sellershippedorders" ? "active" : ""
+                }`}
+                onClick={() => navigate("/seller/sellershippedorders")}
+              >
+                الطلبات المكتملة
+              </button>
 
-            <button
-              className={`cright-tab cright-btn2 ${location.pathname === "/shippedorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellershippedorders")}
-            >
-              الطلبات المكتملة
-            </button>
-
-            <button
-              className={`cright-tab cright-btn3${location.pathname === "/canceledorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellercanceledorders")}
-            >
-              الطلبات الملغية
-            </button>
+              <button
+                className={`cright-tab cright-btn3 ${
+                  location.pathname === "/seller/sellercanceledorders" ? "" : ""
+                }`}
+                onClick={() => navigate("/seller/sellercanceledorders")}
+              >
+                الطلبات الملغية
+              </button>
 
           </div>
         </div>
@@ -64,7 +70,7 @@ export default function SellerShippedOrders() {
             {orders.map((order) => (
               <div 
                 key={order.id}
-                className="order-card completedorder"
+                className="shippedorder-card completedorder"
                 onClick={() => goToDetails(order.id)}
                 style={{ cursor: "pointer" }}
               >

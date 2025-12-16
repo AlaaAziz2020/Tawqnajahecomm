@@ -91,49 +91,34 @@ import { Link } from "react-router-dom";
            </div>
 
        
-           <div className="form-group">
-             <label className=" fw-bolder mb-2">رقم الهاتف</label>
-             <div className="phone-box">
+      <div className="form-group">
+  <label className="fw-bolder mb-2">رقم الهاتف</label>
 
-             <div
-  className="code-box"
-  tabIndex={0}
-  onClick={() => setShowCodes(!showCodes)}
-  aria-expanded={showCodes ? "true" : "false"}
-  aria-label="Country code selector"
->
-                 <span>{code}</span>
-                 <span className="arrow">▼</span>
+  <div className="phone-row">
+    {/* كود الدولة */}
+       <input
+      type="tel"
+      className="phone-number-input"
+      placeholder="123 456 789"
+      value={phone}
+      onChange={(e) => setPhone(e.target.value)}
+    />
+    <select
+      className="country-code-input"
+      value={code}
+      onChange={(e) => setCode(e.target.value)}
+    >
+      <option value="+966">+966</option>
+      <option value="+20">+20</option>
+      <option value="+971">+971</option>
+      <option value="+962">+962</option>
+      <option value="+974">+974</option>
+    </select>
 
-                 {showCodes && (
-                   <ul className="codes-list">
-                     {countries
-                       .filter((c) => c.key.includes(filter))
-                       .map((c, i) => (
-                         <li
-                           key={i}
-                           onClick={() => {
-                             setCode(c.key);
-                             setShowCodes(false);
-                             setFilter("");
-                           }}
-                         >
-                           {c.key} ({c.name})
-                         </li>
-                       ))}
-                   </ul>
-                 )}
-               </div>
-
-               <input
-                 type="text"
-                 className="phone-input"
-                 placeholder="123 456 789"
-                 value={phone}
-                 onChange={(e) => setPhone(e.target.value)}
-               />
-             </div>
-           </div>
+    {/* رقم الهاتف */}
+ 
+  </div>
+</div>
 
          
            <div className="form-group">

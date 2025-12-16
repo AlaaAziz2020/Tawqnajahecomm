@@ -4,7 +4,7 @@ label {
   font-weight: bold;
 }
 .community-page{
-  padding-top: 0px;
+  padding-top: 30px;
 }
 .community-header{
   padding-top: 2px;
@@ -141,6 +141,10 @@ label {
   display: flex;
   justify-content: flex-end;
   gap: 15px;
+};
+.sellers-page{
+          padding-top: 92px;
+
 }
 
 .btn-cancel,
@@ -372,47 +376,70 @@ textarea.form-control {
    (tightened spacing, two-column)
    =========================== */
 @media (min-width: 769px) and (max-width: 1023px) {
-  .community-wrapper {
-    padding: 28px 18px;
-  }
-.community-page{
-  padding-top: 5%;
-}
-  .community-card {
-    width: 96%;
-    max-width: 980px;
-    padding: 24px;
-    margin: 0 auto;
-    padding-bottom: 32px;
+  /* Page container adjustments */
+  .marketers-page {
+    padding-top: 15%; /* Moderate top spacing for tablets */
+    padding-bottom: 40px; /* Consistent padding */
+    margin: 0 auto; /* Center alignment for the page layout */
+    max-width: 95%; /* Box adjustment for tablet screens */
   }
 
-  .community-form-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 24px;
+  /* Card adjustments */
+  .marketers-card {
+    max-width: 900px; /* Limit card width for tablets */
+    padding: 24px; /* Balanced padding inside cards */
+    margin: 12px auto; /* Center card placement */
+    border-radius: 16px; /* Moderate corner radius */
+    box-sizing: border-box;
   }
 
-  .inputs,
-  .keyphone-ar,
-  .form-select,
-  .form-control {
-    height: 50px;
-    font-size: 15px;
-    padding: 10px 12px;
+  /* Title and text adjustments */
+  .marketers-title {
+    font-size: 20px; /* Slightly larger font size for titles */
+    font-weight: bold;
+    margin-bottom: 12px; /* Increased spacing */
+    text-align: right; /* Keep RTL alignment */
   }
 
-  .community-avatar {
-    width: 110px;
+  .marketers-desc {
+    font-size: 15px; /* Adjust font size for scalability */
+    color: #534b4b;
+    font-weight: 500; /* Lightweight description for readability */
+    text-align: justify; /* Text wrapping */
+    margin-bottom: 15px;
   }
 
-  .form-actions {
-    justify-content: flex-end;
-    gap: 14px;
+  .marketsection-title {
+    margin-top: 20px;
+    font-size: 18px; /* Increased section title font size */
+    font-weight: bold;
+    color: #1d3a77;
+    text-align: right;
   }
 
-  .btn-cancel,
-  .btn-save {
-    min-width: 140px;
-    padding: 10px 16px;
+  .terms-list {
+    font-size: 16px; /* Moderate font scaling for tablets */
+    padding-right: 20px; /* Balanced padding */
+    text-align: right;
+  }
+
+  /* Form adjustments */
+  input.form-control {
+    height: 48px; /* Slightly taller inputs for tablets */
+    border-radius: 12px; /* Matching moderate design aesthetics */
+    padding: 0 16px; /* Balanced padding */
+    background: #f9f9f9;
+    font-size: 14px; /* Better readability */
+    width: 100%; /* Full-width inputs */
+  }
+
+  /* Save button adjustments */
+  .marketersave-btn {
+    padding: 12px 40px; /* Larger button padding */
+    font-size: 16px; /* Moderate font scaling for tablets */
+    border-radius: 12px; /* Consistent corner radius */
+    display: inline-block;
+    align-self: center; /* Center button alignment */
   }
 }
 
@@ -424,9 +451,7 @@ textarea.form-control {
   .community-wrapper {
     padding: 30px 20px;
   }
-.community-page{
-  padding-top: 70px;
-}
+
   .community-card {
     padding-right: 37px;
     padding-bottom: 40px;

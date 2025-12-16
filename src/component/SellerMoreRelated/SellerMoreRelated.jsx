@@ -7,7 +7,7 @@ export default function SellerMoreRelated() {
   return (
     <>
 
-<div className="morerelated">
+<div className="sellermorerelated mb-5">
       <SellerRelatedProducts />
 </div>
       

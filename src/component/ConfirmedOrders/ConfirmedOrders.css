@@ -1,10 +1,4 @@
-/* Cleaned ConfirmedOrders CSS
-   - Desktop rules preserved
-   - Single consolidated mobile block (max-width: 767px)
-   - Remove any accidental JS/JSX from this file before pasting
-*/
 
-/* الميل العام للصفحة */
 .orders-page {
   padding-top: 180px; /* علشان الهيدر */
 }
@@ -104,7 +98,7 @@
   font-weight: 400;
 }
 
-.order-price {
+.confirmorder-price {
   margin-right: auto;
   color: #F38B1B;
   font-size: 18px;

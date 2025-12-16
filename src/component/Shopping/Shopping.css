@@ -1,6 +1,6 @@
 .category-page {
     min-height: 70vh;
-    padding-top: 160px;   
+    padding-top: 19px;
     padding-bottom: 40px; 
     direction: rtl;
 }
@@ -121,6 +121,8 @@ border-left: 1px solid #E5E5E5;
 .category-page .breadcrumb{
     direction: rtl;
         padding-right: 18px;
+            font-size: 35px;
+
 
 }
 .category-page .results{
@@ -305,41 +307,41 @@ font-weight: bold;
 
 
 /* ===================== SMALL MOBILE (IPHONE SE & MINI) ===================== */
+
+
+
 @media (max-width: 576px) {
-.footer-phone-row {
-    display: block;
-}
-  .category-page .customer-products-grid {
+  .customer-products-grid {
     grid-template-columns: 1fr;
   }
 
-  .category-page .heading-title,
-  .category-page .main-title,
-  .cat-title {
-    font-size: 20px;
-  }
-
-  .results {
-    font-size: 16px;
-  }
-
-  .cat h3 {
-    font-size: 20px;
-  }
-
-  .category-page .tag {
-    font-size: 14px;
-    padding: 5px 18px;
-  }
-
   .load-more-btn {
-    width: 90%;
+    width: 100%;
     padding: 12px 0;
   }
-  .filter-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .category-page .row {
+    gap: 15px; /* Adjust spacing */
+    flex-wrap: nowrap; /* Ensure grid and filter stay side-by-side */
+  }
+
+  .filter-column {
+    width: 20%; /* Adjust width for compact alignment */
+    padding: 10px; /* Reduce padding */
+    max-height: 100vh; /* Prevent excessive height */
+    overflow-y: auto; /* Make filter scrollable */
+    border-left: 1px solid #E5E5E5; /* Keep divider */
+  }
+
+  .customer-products-grid {
+    grid-template-columns: repeat(4, 1fr); /* Fit 4 products per row */
+    gap: 15px; /* Compact space between products */
+    margin: 0; /* Remove top margin */
+  }
+
+  .customer-products-grid .customer-product-card {
+    width: 100%; /* Ensure cards fit properly */
+  }
 }

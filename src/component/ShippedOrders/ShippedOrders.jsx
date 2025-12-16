@@ -25,12 +25,12 @@ export default function ShippedOrders() {
   };
 
   return (
-    <div className="container neworders-page mt-5 mb-5 pb-5">
+    <div className="container neworders-page  mb-5 pb-5">
 
       <div className="row">
 
         {/* ====== الجزء اليمين (التابات) ====== */}
-        <div className="col-lg-3  d-lg-block mt-5 pt-5">
+        <div className="col-lg-3  d-lg-block ">
           <div className="orders-right-tabs">
 
             <button
@@ -58,13 +58,13 @@ export default function ShippedOrders() {
         </div>
 
         {/* ====== الجزء الشمال (الكروت) ====== */}
-        <div className="col-lg-9 col-12">
+        <div className="col-lg-9 col-12 ">
 
           <div className="corders-wrapper">
             {orders.map((order) => (
               <div 
                 key={order.id}
-                className="order-card completedorder"
+                className="shippedorder-card completedorder"
                 onClick={() => goToDetails(order.id)}
                 style={{ cursor: "pointer" }}
               >

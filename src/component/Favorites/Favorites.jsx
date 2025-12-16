@@ -6,7 +6,7 @@ import carticon from '../../assets/cartsvg.svg'
 export default function Favorites() {
   return (
     <div className="p-table mb-5">
-      <div className="container mt-5">
+      <div className="container ">
 
         <div className="table-wrapper">
 

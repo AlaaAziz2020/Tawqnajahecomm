@@ -20,7 +20,7 @@ export default function SellerNavbar() {
   const toggleMenu = () => setMenuOpen(prev => !prev);
 
   const sidebarLinks = [
-    { icon: <FiUser />, text: "معلومات الحساب", path: "/seller/sellercontractpage" },
+    { icon: <FiUser />, text: "معلومات الحساب", path: "/seller/sellerprofileaccount" },
     { icon: <CiCreditCard1 />, text: "الحساب البنكي", path: "/seller/sellerbankaccount" },
     // { icon: <MdLanguage />, text: "اللغة", path: "/seller/sellerlanguage" },
     // { icon: <FaHeadset />, text: "دعم التطبيق", path: "/seller/sellersupport" },

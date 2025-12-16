@@ -154,7 +154,7 @@
     border-radius: 8px;
   }
 
-  .completedorder { min-height: auto; padding-bottom: 27px; }
+  .completedorder { min-height: 211px; padding-bottom: 23px; }
 }
 
 /* ---------- Tablet: 768px — 1024px ---------- */

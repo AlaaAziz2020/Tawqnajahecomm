@@ -28,8 +28,8 @@ export default function ConfirmedOrders() {
             <div className="orders-right-tabs">
 
               <button
-                className={`cright-tab cright-btn ${
-                  location.pathname === "/confirmedorders" ? "active" : ""
+                className={`cright-tab cright-btn3 ${
+                  location.pathname === "/confirmedorders" ? "" : ""
                 }`}
                 onClick={() => navigate("/confirmedorders")}
               >
@@ -38,7 +38,7 @@ export default function ConfirmedOrders() {
 
               <button
                 className={`cright-tab cright-btn2 ${
-                  location.pathname === "/shippedorders" ? "active" : ""
+                  location.pathname === "/shippedorders" ? "" : ""
                 }`}
                 onClick={() => navigate("/shippedorders")}
               >
@@ -47,7 +47,7 @@ export default function ConfirmedOrders() {
 
               <button
                 className={`cright-tab cright-btn3 ${
-                  location.pathname === "/canceledorders" ? "active" : ""
+                  location.pathname === "/canceledorders" ? "" : ""
                 }`}
                 onClick={() => navigate("/canceledorders")}
               >
@@ -75,7 +75,7 @@ export default function ConfirmedOrders() {
                     <div className="order-bottom-row">
                       <span className="order-badge">x{order.qty}</span>
                       <span className="corder-type">ملابس</span>
-                      <span className="order-price">
+                      <span className="confirmorder-price">
                         {order.price} ر.س
                       </span>
                     </div>

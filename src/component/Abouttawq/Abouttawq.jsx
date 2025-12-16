@@ -3,8 +3,8 @@ import "./Abouttawq.css";
 
 export default function Abouttawq() {
   return (
-    <div className="tawqabout-wrapper">
-      <div className="container">
+    <div className="tawqabout-wrapper pb-5 " >
+      <div className="container pb-5">
 
         <h1 className="about-title">عن طوق نجاة</h1>
 

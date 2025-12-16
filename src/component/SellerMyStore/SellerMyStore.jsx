@@ -7,7 +7,7 @@ export default function SellerMyStore() {
     <>
       <div className="mystorepage ">
         <div className="container">
-           {/* <SellerRelatedProducts />  */}
+            <SellerRelatedProducts />  
         </div>
       </div>
     </>

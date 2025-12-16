@@ -1,16 +1,16 @@
 /* ================= MAIN NAVBAR ================== */
 
 .tn-nav-main {
-  background: #1d3a77;
-  padding: 14px 20px;
-  width: 100%;
-  position: fixed;
-  top: 81px;
-  left: 0;
-  z-index: 9999;
-    height: 68px;
-  display: flex;
-  align-items: center;
+    background: #1d3a77;
+    padding: 14px 20px;
+    width: 100%;
+    position: fixed;
+    top: 79px;
+    left: 0;
+    z-index: 9999;
+    height: 69px;
+    display: flex;
+    align-items: center;
 }
 
 .tn-nav-main .container {
@@ -83,7 +83,7 @@
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   position: relative;
 }
 

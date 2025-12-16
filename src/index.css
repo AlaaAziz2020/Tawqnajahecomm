@@ -36,7 +36,6 @@ body {
 /* Apply consistent vertical spacing to major sections */
 .home-section,
 .services-section,
-.related-section,
 .customer-categories-section,
 .customer-products-grid {
   margin-top: var(--section-vert-gap);
@@ -46,8 +45,7 @@ body {
 
 /* If you prefer the spacing to come from padding instead of margin */
 .home-section > .container,
-.services-section > .container,
-.related-section > .container {
+.services-section > .container {
   padding-top: calc(var(--section-vert-gap) / 2);
   padding-bottom: calc(var(--section-vert-gap) / 2);
 }
@@ -92,7 +90,6 @@ body {
 /* Apply consistent vertical spacing to major sections */
 .home-section,
 .services-section,
-.related-section,
 .customer-categories-section,
 .customer-products-grid {
   margin-top: var(--section-vert-gap);
@@ -101,12 +98,12 @@ body {
 }
 
 /* If you prefer the spacing to come from padding instead of margin */
-.home-section > .container,
+/* .home-section > .container,
 .services-section > .container,
 .related-section > .container {
   padding-top: calc(var(--section-vert-gap) / 2);
   padding-bottom: calc(var(--section-vert-gap) / 2);
-}
+} */
 
 /* Tweak for smaller screens */
 @media (max-width: 767px) {
@@ -128,6 +125,10 @@ body {
   margin-top: 0 !important;
 }
 */
+
+.sellerrelated-section{
+  margin-top: 15%;
+}
 @media (max-width: 480px) {
   .tn-nav-main {
     /* top: 0 !important; */

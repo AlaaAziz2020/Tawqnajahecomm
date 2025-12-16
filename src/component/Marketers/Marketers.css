@@ -3,7 +3,8 @@
   background: #f5f5f7;
   direction: rtl;
   /* responsive top offset (min 40px, scales with viewport, max 120px) */
-  padding-top: clamp(40px, 6vw, 120px);
+  /* padding-top: clamp(40px, 6vw, 120px); */
+  padding-top: 10%;
   padding-bottom: 40px;
 }
 
@@ -102,17 +103,82 @@ input.form-control {
   .terms-list { font-size: 16px; padding-right: 16px; }
   input.form-control { height: 48px; }
 }
+@media (max-width: 767px) {
+  /* Page container */
+  .marketers-page {
+    padding-top: 10%; /* Maintain proportional top spacing */
+    padding-bottom: 40px; /* Consistent bottom padding */
+    margin: 0 16px; /* Side margin for small screens */
+  }
 
+  /* Card adjustments */
+  .marketers-card {
+    background: #fff;
+    border-radius: 12px; /* Slightly smaller radius for smaller screens */
+    padding: 16px; /* Compact padding */
+    margin: 12px auto; /* Space between cards & center */
+    box-sizing: border-box;
+    width: 100%; /* Full width on mobile */
+  }
+
+  /* Title and text adjustments */
+  .marketers-title {
+    font-size: 16px; /* Adjust title size */
+    font-weight: bold;
+    margin-bottom: 8px; /* Compact title margin */
+    text-align: right; /* Align text to RTL direction */
+  }
+
+  .marketers-desc {
+    color: #534b4b;
+    font-size: 14px; /* Smaller font for mobile */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: justify; /* Fit description within narrow screens */
+  }
+
+  .marketsection-title {
+    font-size: 16px; /* Adjust section title size */
+    margin-top: 18px;
+    font-weight: bold;
+    color: #1d3a77;
+    text-align: right;
+  }
+
+  .terms-list {
+    font-size: 14px; /* Compact text size */
+    padding-right: 12px; /* Reduced padding */
+    text-align: right;
+    margin-bottom: 10px; /* Space between list items */
+  }
+
+  /* Form elements */
+  input.form-control {
+    border-radius: 10px; /* Smaller input radius */
+    height: 44px; /* Adjust input height */
+    background: #f9f9f9;
+    padding: 0 14px; /* Compact input padding */
+    width: 100%; /* Full width on mobile */
+  }
+
+  /* Save button */
+  .marketersave-btn {
+    background: #1d3a77;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 14px; /* Adjust font size */
+    width: 100%; /* Full width button for mobile */
+    max-width: 200px; /* Limit button width */
+    margin: 12px auto; /* Space around the button */
+    text-align: center;
+  }
+}
 /* ===========================
    DESKTOP: 1024px and up
    =========================== */
 @media (min-width: 1024px) {
-  .marketers-page {
-    /* padding-top: clamp(56px, 5vw, 120px);
-    padding-bottom: 48px; */
-            margin-top: 143px;
 
-  }
 
   .marketers-card {
     padding: 30px;

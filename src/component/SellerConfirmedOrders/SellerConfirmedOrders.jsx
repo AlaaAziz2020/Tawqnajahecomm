@@ -70,7 +70,7 @@ export default function SellerConfirmedOrders() {
                     <div className="order-bottom-row">
                       <span className="order-badge">x{order.qty}</span>
                       <span className="corder-type">ملابس</span>
-                      <span className="order-price">{order.price} ر.س</span>
+                      <span className="confirmorder-price">{order.price} ر.س</span>
                     </div>
                   </div>
                 </div>

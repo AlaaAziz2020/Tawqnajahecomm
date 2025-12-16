@@ -9,24 +9,26 @@
   /* padding-top: calc(var(--site-header-height) + var(--section-gap)); */
   /* box-sizing: border-box; */
   padding-top: 10%;
+  margin: 5px;
 }
 
 /* ---------- Main Section ---------- */
 .sellerrelated-section {
   max-width: 1200px;
-  margin: 40px auto;           /* ✅ بدل margin:13% */
+     direction: rtl;
+  margin-top: 80px !important;
   padding: 0 16px;
   box-sizing: border-box;
 }
 
 /* ---------- Header ---------- */
 .related-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-  width: 100%;
-  direction: rtl;              /* صفحة عربية */
+display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    width: 100%;
+    direction: rtl;             
 }
 
 .related-title {
@@ -57,10 +59,12 @@
 
 /* ---------- Cards Grid ---------- */
 .related-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  width: 100%;
+display: grid
+;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 93%;
+
 }
 
 /* ---------- Card ---------- */

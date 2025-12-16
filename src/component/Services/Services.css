@@ -27,13 +27,13 @@
 
 /* Example service card sizing and spacing */
 .services-section .service-card {
-  width: 100%;
-  max-width: 420px;     /* keep individual cards narrower */
-  padding: 12px;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(10, 42, 87, 0.06);
-  box-sizing: border-box;
+width: 100%;
+    max-width: 420px;
+    padding: 27px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(10, 42, 87, 0.06);
+    box-sizing: border-box;
 }
 
 /* Text sizes (desktop defaults — slightly reduced) */

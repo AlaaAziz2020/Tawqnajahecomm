@@ -104,16 +104,26 @@
   font-weight: 400;
 }
 
-.order-price {
-  margin-right: auto;
+.confirmorder-price {
+   margin-right: auto;
   color: #F38B1B;
   font-size: 18px;
   font-weight: bold;
 }
-
+  
 /* Consolidated mobile rules */
-@media (max-width: 767px) {
+
   /* Page spacing & container */
+
+
+  @media (max-width: 768px) {
+  
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 8px 15px 5px;
+    }
   .mobileorders{
     padding-top: 118px !important;
   }
@@ -246,6 +256,11 @@
     font-size: 16px !important;
     font-weight: 700 !important;
   }
+    .order-price-left {
+        font-size: 16px;
+        position: absolute;
+        top: 75%;
+    }
 
   /* Hide any toggle button rules if present */
   .tabs-toggle-btn {
@@ -301,6 +316,3 @@
 }
 
 /* Optional: fluid tabs so size scales smoothly across widths */
-.cright-tab {
-  font-size: 20px;
-}

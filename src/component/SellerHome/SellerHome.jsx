@@ -42,7 +42,7 @@ export default function SellerHome() {
       </div>
 
       {/* ===== Related Products Section ===== */}
-      <div className="home-section">
+      <div className="home-section mb-5 pb-5">
         <SellerRelatedProducts />
       </div>
       </div>

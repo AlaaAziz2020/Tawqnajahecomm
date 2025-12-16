@@ -34,25 +34,31 @@ export default function SellerCanceledOrders() {
           <div className="orders-right-tabs">
 
             <button
-              className={`cright-tab cright-btn shipped-btn ${location.pathname === "/confirmedorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellerconfirmedorders")}
-            >
-              الطلبات الحالية
-            </button>
+                className={`cright-tab cright-btn ${
+                  location.pathname === "/seller/sellerconfirmedorders" ? "active" : ""
+                }`}
+                onClick={() => navigate("/seller/sellerconfirmedorders")}
+              >
+                الطلبات الحالية
+              </button>
 
-            <button
-              className={`cright-tab cright-btn2 ${location.pathname === "/shippedorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellershippedorders")}
-            >
-              الطلبات المكتملة
-            </button>
+              <button
+                className={`cright-tab cright-btn2 ${
+                  location.pathname === "/seller/sellershippedorders" ? "" : ""
+                }`}
+                onClick={() => navigate("/seller/sellershippedorders")}
+              >
+                الطلبات المكتملة
+              </button>
 
-            <button
-              className={`cright-tab cright-btn3${location.pathname === "/canceledorders" ? "active" : ""}`}
-              onClick={() => navigate("/seller/sellercanceledorders")}
-            >
-              الطلبات الملغية
-            </button>
+              <button
+                className={`cright-tab cright-btn3 ${
+                  location.pathname === "/seller/sellercanceledorders" ? "active" : ""
+                }`}
+                onClick={() => navigate("/seller/sellercanceledorders")}
+              >
+                الطلبات الملغية
+              </button>
 
           </div>
         </div>
@@ -70,7 +76,7 @@ export default function SellerCanceledOrders() {
               >
                 <div className='left-side text-left'>
                   <div className="canceledstatus-tab text-white fw-bold">الملغية</div>
-                  <p className="order-price-left">{order.price}</p>
+                  <p className="cancelorder-price-left">{order.price}</p>
                 </div>
 
                 <div className="order-content">

@@ -158,8 +158,7 @@ const router = createBrowserRouter([
 { path: 'sidebarfilters', element: <SidebarFilters /> },
 { path: 'productlist', element: <ProductList /> },
 { path: 'productcard', element: <ProductCard /> },
-{ path: 'product/:id', element: <ProductDetails /> },
-{ path: 'product/:id', element: <ProductDetails /> },    // ← مصححة
+{ path: 'sellerproductdetails/:id', element: <ProductDetails /> },
 { path: 'canceledorders', element: <CanceledOrders /> },
 { path: 'mystore', element: <MyStore /> },
 { path: 'neworders', element: <NewOrders /> },
@@ -214,7 +213,7 @@ const router = createBrowserRouter([
 {path:"offerstawqnajah",element:<Offerstawqnajah/>},
 {path:"successpartners",element:<SuccessPartners/>},
 {path:'sellers',element:<Sellers/>},
-{path:'/sellers/:id',element:<SellersDetails/>},
+{path:'product/:id',element:<SellersDetails/>},
 {path:'alloffers',element:<AllOffers/>},
 {path:'/products/:category',element:<AllProductsByCategory/>},
 {path:'privacy',element:<Privacy/>}
@@ -247,7 +246,7 @@ const router = createBrowserRouter([
       { path: '/seller/sellerproductdetails', element: <SellerProductDetails /> },
       { path: '/seller/sellercanceledorders', element: <SellerCanceledOrders /> },
       { path: '/seller/sellermystore', element: <SellerMyStore /> },
-      { path: 'sellerneworders', element: <SellerNewOrders /> },
+      { path: '/seller/sellerneworders', element: <SellerNewOrders /> },
       { path: '/seller/sellercanceledordersdetails', element: <SellerCanceledOrdersDetails /> },
       { path: '/seller/selleraddadvertisement', element: <SellerAddAdvertisement /> },
       { path: '/seller/sellerfinancialreports', element: <SellerFinancialReports /> },
@@ -270,7 +269,7 @@ const router = createBrowserRouter([
       { path:'/seller/selleremptyadvertisement',element:<SellerEmptyAdvertisement/> },
       { path:'/seller/sellerchoosesupport',element:<SellerChooseSupport/> },
 
-      { path:'/seller/sellerproduct/:id', element:<SellerProductDetails /> },
+      { path:'sellerproduct/:id', element:<SellerProductDetails /> },
       { path:'/seller/sellermaddisupport', element:<SellerMaddiSupport /> },
       { path:'/seller/selleraynisupport', element:<SellerAyniSupport /> },
 
